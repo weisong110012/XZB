@@ -1,0 +1,47 @@
+<!--pages/main/main.wxml-->
+<view class='container'>
+  <image class='bg' src='../../imgs/bg.jpg'></image>
+  <view class="userinfo">
+    <button class='userinfo-login' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap='login' > 登录 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+       <!-- <text class="userinfo-nickname" bindtap="bindViewTap">{{userInfo.nickName}}</text>  -->
+    </block>
+  </view>
+
+  <view class='preimg-wraper'>
+    <view class='preimg-img'>
+        <image src='{{preImg}}' bindtap='preshow'></image>
+    </view>
+    <view class='preimg-shadom' wx:if="{{!quanxian}}" bindtap='showToast'>
+        <image src='../../imgs/suo.png'></image>
+    </view>
+    <view class='upload-shaom' wx:if='{{!uploaded}}'></view>
+  </view>
+
+  <view class='choose-wrap'>
+     <view class='choose-lists'>
+        <block wx:for='{{lists}}' wx:key='{{item}}' wx:index="{{index}}">
+          <view class='choose-item {{active==index?"active":""}}'  bindtap='choose' data-quanxian='{{!item.quanxian}}' data-presrc='{{item.preSrc}}' data-index='{{index}}'>
+            <view class='choose-img'>
+              <image src='{{item.imgSrc}}'></image>
+            </view>
+            <view class='choose-suo' hidden='{{!item.quanxian}}'>
+              <image src='../../imgs/listsuo.png'></image>
+            </view>
+            <view class='choose-text'>{{item.text}}</view>
+          </view>
+        </block>
+     </view>
+  </view>
+  <view class='Btn-wrap'>
+      <button type='primary' disabled="{{!quanxian}}" bindtap='chooseImg'>{{btnText}}</button>
+  </view>
+  <view class='lianxi'>
+      <view class='text'>联系我们：<view class='text-des'>17273746455</view></view>
+  </view>
+  <view class='loading-wrap' wx:if='{{loading}}'>
+    <image src='../../imgs/loading.gif'></image>
+  </view>
+
+</view>

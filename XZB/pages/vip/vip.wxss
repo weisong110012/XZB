@@ -1,0 +1,51 @@
+/* pages/vip/vip.wxss */
+.vip-lists{
+  padding: 20px;
+  width: 100%;
+}
+.vip-item{
+  width:44%;
+  margin-left: 3%;
+  float: left;
+  margin-bottom: 5px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1rpx solid #89daf9;
+  font-size: 33rpx;
+  border-radius: 8px;
+  
+}
+.vip-item.active{
+  background: #3bc3f5;
+  color: white;
+  border: 1rpx solid #3bc3f5;
+}
+.open-btn{
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+.open-vip{
+  width: 89%;
+  margin: 0 auto;
+  background: #3bc3f5;
+  font-size: 40rpx;
+  color: white;
+   height: 50px;
+  line-height: 50px;
+   border-radius: 10px;
+}
+.viptext{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.viptext-item{
+  width: 70%;
+  margin: 0 auto;
+  font-size:28rpx; 
+  margin-bottom: 5px;
+  color: #888;
+
+}

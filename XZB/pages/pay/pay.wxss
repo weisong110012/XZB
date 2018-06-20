@@ -1,0 +1,38 @@
+/* pages/pay/pay.wxss */
+.pay-list{
+  text-align: center;
+  margin: 40rpx 0px;
+}
+.pay-text{
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.pay-img image{
+  width: 200px;
+  height: 150px;
+  margin-bottom: 40px;
+}
+.pay-money{
+    background: #3bc3f5;
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+}
+.pay-btn{
+  position: fixed;
+  bottom: 30px;
+  width: 140px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  background: #1AAD19;
+}

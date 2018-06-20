@@ -1,0 +1,30 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+      <view class='my-header'>
+          <view class='my'>
+            <view class='my-icon'>
+              <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+              <image class="icon-vip" src='../../imgs/vip.png'></image>
+              <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+            </view>
+          </view>
+          <view class="vip-wraper" bindtap='openVip'>
+            <image class="icon-huanyuan" src='../../imgs/huiyuan.png'></image>
+				  	<text class="vip-text">{{openText}}</text>
+				  </view>
+      </view>
+      <view class="history-lists">
+          <view class="history-wraper">
+              <block wx:for="{{history}}" wx:key='{{item}}' wx:index='{{index}}'>
+                  <view class='history-item'>
+                      <view class="time">{{item.time}}</view>
+                      <view class="history-img">
+                          <image src='{{item.imgSrc}}' bindtap='preshow'  data-index='{{index}}' data-src='{{item.imgSrc}}'></image>
+                      </view>
+                  </view>
+              </block>
+          </view>
+      </view>
+
+
+</view>

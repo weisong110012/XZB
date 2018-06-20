@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/my/my",
+    "pages/pay/pay",
+    "pages/vip/vip"
+   
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4aa6fb",
+    "navigationBarTitleText": "型值表转换",
+    "navigationBarTextStyle":"white"
+  }
+}

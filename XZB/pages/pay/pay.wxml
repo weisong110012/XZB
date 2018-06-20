@@ -1,0 +1,17 @@
+<!--pages/pay/pay.wxml-->
+<view class='container'>
+    <view class='pay-list'>
+      <view class='pay-text'>
+        {{item.text}}
+      </view>
+      <view class='pay-img'>
+        <image src='{{item.preSrc}}'></image>
+      </view>
+      <view class='pay-money'>
+        {{item.money}}元
+      </view>
+    </view>
+    <view class='pay-btn'>
+        <view bindtap='wxpay'>确认支付</view> 
+    </view>
+</view>

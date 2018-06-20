@@ -1,0 +1,23 @@
+<!--pages/vip/vip.wxml-->
+<view class='container'>
+  <view class='vip-lists'>
+    <block wx:for='{{lists}}' wx:key='{{item}}' wx:index="{{index}}">
+      <view class='vip-item {{active==index?"active":""}}' bindtap='chooseVip' data-index='{{index}}'>
+        {{item.title}}  ￥{{item.money}}
+      </view>
+    </block>
+  </view>
+
+  <view class='open-btn' bindtap='openVip'>
+   <view class='open-vip'>{{openBtnText}}</view>
+  </view>
+  <view class='viptext'>
+    <block wx:for='{{lists}}' wx:key='{{item}}' wx:index="{{index}}">
+      <view class='viptext-item '>
+        {{item.title}}: {{item.text}}
+      </view>
+    </block>
+  </view>
+
+
+</view>
